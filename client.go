@@ -10,7 +10,10 @@ import (
 	"sort"
 )
 
-const endpoint = "https://mcr.microsoft.com/v2"
+const (
+	RegistryName = "mcr.microsoft.com"
+	endpoint     = "https://" + RegistryName + "/v2"
+)
 
 type client struct {
 	base *http.Client
